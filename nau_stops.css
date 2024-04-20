@@ -16,13 +16,16 @@ body {
   margin: auto;
 }
 
+.map-container {
+  display: flex;
+  position: center;
+}
+
 #map {
-  top: 50px;
-  left: 25%;
-  width: 200px;
-  height: 200px;
-  margin: 100px;
-  padding: 75px;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  position: inherit;
 }
 
 .navbar {

@@ -1,11 +1,12 @@
-const map = L.map('map', {zIndex: -1, zoomControl: false, attributionControl: false}).setView([35.18782, -111.6528], 14);
+const bounds = [[35.19509477271809, -111.65855721301321], [35.17236999292436, -111.6480326985566]]
+const map = L.map('map', {maxBounds: bounds, minZoom: 13, zIndex: -1, zoomControl: false, attributionControl: false}).setView([35.18782, -111.6528], 14);
 const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19, zIndex: -1,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
 // Jacks line (colored yellow)
-const jacksList = [
+var jacksList = [
     marker1 = L.marker([35.17814395416947, -111.65254952946732]).bindPopup("Pine Ridge"),
     marker2 = L.marker([35.17553940892971, -111.65634217301437]).bindPopup("Forestry"),
     marker3 = L.marker([35.176758374019876, -111.65918924264419]).bindPopup("South Commuter"),
@@ -20,13 +21,12 @@ const jacksList = [
     marker12 = L.marker([35.17997067729946, -111.65097718626353]).bindPopup("Skydome"),
 ];
 
-for (marker of jacksList) {
-    marker.setIcon(L.divIcon({classname: "dot-blue"}))
-};
+jacksList.forEach((jacksMarker) => jacksMarker.setIcon(L.divIcon({className: "dot-yellow"})));
+
 
 // Louie line (colored blue)
-const louieList = [
-    marker13 = L.marker([35.177156448705965, -111.65408819716697]).bindPopup("Mconnell Hall"),
+var louieList = [
+    marker13 = L.marker([35.177156448705965, -111.65408819716697]).bindPopup("Mconnell Hall\rNext Bus in: 5m\rGood to Go!"),
     marker14 = L.marker([35.18013854253613, -111.6507922442267]).bindPopup("San Francisco"),
     marker15 = L.marker([35.1885705573119, -111.65414904852096]).bindPopup("Bookstore"),
     marker16 = L.marker([35.191440816484686, -111.6531363084861]).bindPopup("Bio Science"),
@@ -40,9 +40,7 @@ const louieList = [
     marker24 = L.marker([35.17528211188283, -111.656502147603]).bindPopup("South Village"),
 ];
 
-for (marker in louieList) {
-    marker.setIcon(L.divIcon({classname: "dot-yellow"}))
-};
+louieList.forEach((louieMarker) => louieMarker.setIcon(L.divIcon({className: "dot-blue"})));
 
 const louie = L.layerGroup(louieList);
 const jacks = L.layerGroup(jacksList);

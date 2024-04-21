@@ -24,17 +24,17 @@ body {
 .dot-blue {
   height: 25px;
   width: 25px;
-  background-color: #3333b4;
+  background-color: #3366FF;
   border-radius: 50%;
-  display: inline-block;
+  box-shadow: 0px 0px 0px 2px black;
 }
 
 .dot-yellow {
   height: 25px;
   width: 25px;
-  background-color: #cede4e;
+  background-color: gold;
   border-radius: 50%;
-  display: inline-block;
+  box-shadow: 0px 0px 0px 2px black;
 }
 
 #map-container {

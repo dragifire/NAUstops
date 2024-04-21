@@ -1,4 +1,76 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Driver</title>   
+    <style>
+        
 
+        
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center the button horizontally */
+        button {
+            padding: 20px 40px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Button to toggle between Stop and Go -->
+    <button id="toggleButton" onclick="toggleButtonText()">Stop</button>
+
+    <!-- Button for different settings -->
+    <button id="settingsButton" onclick="cycleSettings()">25%</button>
+    
+
+    <script>
+        function toggleButtonText() {
+            var button = document.getElementById('toggleButton');
+            if (button.innerHTML === 'Stop') {
+                button.innerHTML = 'Go';
+            } else {
+                button.innerHTML = 'Stop';
+            }
+        }
+
+        function cycleSettings() {
+            var button = document.getElementById('settingsButton');
+            switch (button.innerHTML) {
+                case '25%':
+                    button.innerHTML = '50%';
+                    break;
+                case '50%':
+                    button.innerHTML = '75%';
+                    break;
+                case '75%':
+                    button.innerHTML = 'Full';
+                    break;
+                case 'Full':
+                    button.innerHTML = '25%';
+                    break;
+                default:
+                    button.innerHTML = '25%';
+            }
+        }
+    </script>
+</body>
 </html>

@@ -11,6 +11,11 @@ header {
   box-sizing: border-box;
 }
 
+h1 {
+  margin-bottom: 7px;
+  justify-content: center;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(227, 226, 219);
@@ -49,6 +54,13 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: auto;
 }
 
 .navbar {

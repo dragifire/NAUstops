@@ -3,7 +3,7 @@ header {
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    font-size: 70px;
    color: #fdc255;
-}
+  }
 
 * {
   margin: 0;
@@ -168,6 +168,7 @@ body {
   right: 15px;
   font-size: 1.2rem;
   color: #0e2431;
+  top: -15px;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {

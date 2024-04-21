@@ -65,10 +65,6 @@ body {
   height: 62px;
 }
 
-.navbar .menu-items {
-  display: flex;
-}
-
 .navbar .nav-container li {
   list-style: none;
 }
@@ -146,14 +142,17 @@ body {
   padding-top: 120px;
   background-color: rgba(194, 193, 188, 0.716);
   height: 100vh;
-  width: 50%;
-  transform: translate(-150%);
+  width: 500px;
   display: flex;
   flex-direction: column;
   margin-left: -40px;
   padding-left: 50px;
-  transition: transform 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
   text-align: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -150vw;
 }
 
 .navbar .menu-items li {
@@ -172,21 +171,21 @@ body {
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
+  left: 0;
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-icon .hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-icon .hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-icon .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo{
+/*.nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
-}
+}*/

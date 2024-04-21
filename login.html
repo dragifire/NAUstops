@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <a href="naustops.html">
+    <!--back to home-->
+    <title>Login</title>
+    <a href="nau_stops.html">
         <img src="nau_logo.png" alt="Button Image">
-    <title>Driver Log in</title>
-    <script>
-        function validateForm() {
-            // Get the values of username and password fields
-            var username = document.getElementById("Admin").value;
-            var password = document.getElementById("password").value;
+    </a>
 
-            // Check if username and password are correct
-            if (username === "correctUsername" && password === "correctPassword") {
-                alert("Login successful!");
-                return true; // Proceed with form submission
-            } else {
-                alert("Invalid credentials. Please try again.");
-                return false; // Prevent form submission
-            }
-        }
-    </script>
+    <h2>Driver login portal</h2>
 </head>
 <body>
 
     <form onsubmit="return validateForm()">
         <!-- Username -->
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username"><br>
 
         <!-- Password -->
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password"><br>
+
+        <!-- Message for incorrect credentials -->
+        <p id="message" style="color:red;"></p>
 
         <!-- Submit Button -->
         <input type="submit" value="Submit">
     </form>
 
+    <script>
+        function validateForm() {
+            // Get the values of username and password fields
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are correct
+            if (username === "Admin" && password === "password") {
+                // Redirect to another page
+                window.location.href = "driver_portal.html";
+                return false; // Prevent form submission since we're redirecting
+            } else {
+                // Display error message for incorrect credentials
+                document.getElementById("message").innerHTML = "Invalid credentials. Please try again.";
+                return false; // Prevent form submission
+            }
+        }
+    </script>
 </body>
 </html>
+

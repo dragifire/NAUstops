@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <a href="naustops.html">
-                <img src="nau_logo.png" alt="Button Image">
-            </a>
-        </head>
-    </html>
+<html>
+<head>
+    <a href="naustops.html">
+        <img src="nau_logo.png" alt="Button Image">
+    <title>Driver Log in</title>
+    <script>
+        function validateForm() {
+            // Get the values of username and password fields
+            var username = document.getElementById("Admin").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are correct
+            if (username === "correctUsername" && password === "correctPassword") {
+                alert("Login successful!");
+                return true; // Proceed with form submission
+            } else {
+                alert("Invalid credentials. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

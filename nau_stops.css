@@ -21,10 +21,23 @@ body {
   margin: auto;
 }
 
+.map-container {
+  display: flex;
+  position: center;
+}
+
+#map {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  position: inherit;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  z-index: 999;
 }
 
 .nav-container {
@@ -32,14 +45,17 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 62px;
+  z-index: 999;
 }
 
 .navbar .menu-items {
   display: flex;
+  z-index: 999;
 }
 
 .navbar .nav-container li {
   list-style: none;
+  z-index: 999;
 }
 
 .navbar .nav-container a {
@@ -52,12 +68,14 @@ body {
 
 .navbar .nav-container a:hover{
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .nav-container {
   display: block;
   position: relative;
   height: 60px;
+  z-index: 999;
 }
 
 .nav-container .checkbox {
@@ -105,6 +123,7 @@ body {
 .nav-container .hamburger-lines .line3 {
   transform-origin: 0% 100%;
   transition: transform 0.4s ease-in-out;
+  z-index: 999;
 }
 
 .navbar .menu-items {
@@ -119,12 +138,14 @@ body {
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
+  z-index: 999;
 }
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   font-weight: 500;
+  z-index: 999;
 }
 
 .logo {

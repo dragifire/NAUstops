@@ -1,31 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--back to home-->
     <title>Login</title>
-    <a href="nau_stops.html">
-        <img src="nau_logo.png" alt="Button Image">
-    </a>
+    <style>
+        /* Overall layout using flexbox */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    <h2>Driver login portal</h2>
+        /* Container for the logo and title */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Container for the form */
+        .form-container {
+            display: grid;
+            place-items: center;
+        }
+
+        /* Style the form */
+        form {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the form elements */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background-color: #00214d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0328ac;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <!-- Container for logo and title -->
+    <div class="header">
+        <a href="nau_stops.html">
+            <img src="nau_logo.png" alt="Button Image">
+        </a>
+        <h2>Driver login portal</h2>
+    </div>
 
-    <form onsubmit="return validateForm()">
-        <!-- Username -->
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br>
+    <!-- Container for the form -->
+    <div class="form-container">
+        <form onsubmit="return validateForm()">
+            <!-- Username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
 
-        <!-- Password -->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
 
-        <!-- Message for incorrect credentials -->
-        <p id="message" style="color:red;"></p>
+            <!-- Message for incorrect credentials -->
+            <p id="message"></p>
 
-        <!-- Submit Button -->
-        <input type="submit" value="Submit">
-    </form>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
     <script>
         function validateForm() {
@@ -47,4 +112,3 @@
     </script>
 </body>
 </html>
-

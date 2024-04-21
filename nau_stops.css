@@ -13,6 +13,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: rgb(227, 226, 219);
 }
 
 .container {
@@ -29,8 +30,8 @@ body {
 
 #map {
   display: flex;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
 }
 
 .navbar {
@@ -45,17 +46,14 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 62px;
-  z-index: 999;
 }
 
 .navbar .menu-items {
   display: flex;
-  z-index: 999;
 }
 
 .navbar .nav-container li {
   list-style: none;
-  z-index: 999;
 }
 
 .navbar .nav-container a {
@@ -75,7 +73,6 @@ body {
   display: block;
   position: relative;
   height: 60px;
-  z-index: 999;
 }
 
 .nav-container .checkbox {
@@ -126,12 +123,11 @@ body {
 .nav-container .hamburger-lines .line3 {
   transform-origin: 0% 100%;
   transition: transform 0.4s ease-in-out;
-  z-index: 999;
 }
 
 .navbar .menu-items {
   padding-top: 120px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(194, 193, 188, 0.716);
   height: 100vh;
   width: 100%;
   transform: translate(-150%);
@@ -141,14 +137,12 @@ body {
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
-  z-index: 999;
 }
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   font-weight: 500;
-  z-index: 999;
 }
 
 .logo {

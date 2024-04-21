@@ -11,6 +11,26 @@
         .logo {
             margin-top: 20px; /* Add margin to adjust vertical position */
         }
+
+        /* Center the image at the bottom */
+        .bottom-image {
+            display: block;
+            margin: 0 auto;
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+
+        /* Make sure the image covers the whole screen */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -19,10 +39,10 @@
             <img src="nau_logo.png" alt="Button Image">
         </a>
         <h2>Announcements:</h2>
-
-    <p>No current announcements</p>
-
+        <p>Flagstaff Mountain campus closed due to snow.</p>
+        <p>Stay safe lumberjacks</p>
     </div>
+    <img class="bottom-image" src="images.jpeg" alt="Louie gettin buck">
 </body>
-
 </html>
+
